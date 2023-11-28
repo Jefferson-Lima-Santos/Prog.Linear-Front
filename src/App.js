@@ -143,7 +143,7 @@ function App () {
           <div className='grid-Content'>
             {diasCalulados.map((funcionario, index) => (
               <div key={index}>
-                <p>Funcionario N°{funcionario.id}</p>
+                <p>Funcionario N°{index + 1}</p>
                 <p>Dias Calculado: {funcionario.value.join(', ')}</p>
                 <p>Dias Escolhidos: {diasEscolhidos[index].value.join(', ')}</p>
                 <div className='calendar'>
