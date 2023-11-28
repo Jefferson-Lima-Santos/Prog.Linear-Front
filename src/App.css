@@ -1,38 +1,153 @@
 .App {
+  font-family: Arial, sans-serif;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.file-upload-header {
+  display: flex;
+  justify-content: space-evenly; 
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  width: 100%;
+}
+
+.input-file {
+  display: none;
+}
+
+.input-file-trigger {
+  cursor: pointer;
+  padding: 8px 12px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.print-btn {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.content-to-print{
+  display: flex;
+  width: 90vw;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  margin: 20px 0 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  min-width: 60%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info {
+  margin-bottom: 10px;
+  width: 50%;
+  text-align: left;
+}
+
+span {
+  font-weight: bold;
+  margin-left: 5px;
+  color: #3498db;
+}
+.grid-Container{
+  display: flex;
+  width: 100%;
+}
+.grid-Content{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.grid-Content div{
+  margin: 0 10px 20px 10px
+}
+.grid-Content div *{
+  margin: 0;
+  padding: 2px;
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px; 
+}
+
+.calendar span {
+  border: 1px solid #ccc;
+  padding: 1px;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.column-header {
+  font-weight: bold;
+  text-align: center;
+  padding: 1px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calendar span.selected {
+  background-color: #00ff00 !important; 
+}
+.calendar span.sorted {
+  background-color: #e3d80f; 
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+p {
+  margin: 5px 0; /* Espaçamento interno do parágrafo */
+  font-size: 16px;
+  color: #333;
+}
+
+/* Estilize o número do funcionário de maneira específica, se desejar */
+p:first-child {
+  font-weight: bold;
+  color: #007bff; /* Cor azul, ajuste conforme necessário */
+}
+
+/* Estilize o texto específico, se desejar */
+p:nth-child(2),
+p:nth-child(3) {
+  font-style: italic;
+  color: #555;
 }
